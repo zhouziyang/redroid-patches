@@ -1,0 +1,25 @@
+From 1aa6d07b395f4da9f5339ef2b85b387f55e0a91f Mon Sep 17 00:00:00 2001
+From: Ziyang Zhou <ziyang.zhou@outlook.com>
+Date: Thu, 18 Jul 2024 22:09:46 +0800
+Subject: [PATCH] workaround for hostapd CFI issues
+
+Change-Id: Ic448fca01d9972b6b3a91e28e49b05956ca207e4
+---
+ target/product/cfi-common.mk | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/target/product/cfi-common.mk b/target/product/cfi-common.mk
+index fe62f74..bc4db08 100644
+--- a/target/product/cfi-common.mk
++++ b/target/product/cfi-common.mk
+@@ -19,7 +19,6 @@
+ PRODUCT_CFI_INCLUDE_PATHS :=  \
+     device/google/cuttlefish/guest/libs/wpa_supplicant_8_lib \
+     external/tinyxml2 \
+-    external/wpa_supplicant_8 \
+     frameworks/av/camera \
+     frameworks/av/media \
+     frameworks/av/services \
+-- 
+2.45.1
+
